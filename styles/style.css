@@ -12,24 +12,24 @@
 
 .header__menu {
     justify-self: center;
-    align-self: center;
-    
+    align-self: center;   
 }
 
 .header__links-list {
     display: flex;
-    list-style-type: circle;
+    list-style-type: none;
 }
 
 .header__links-list-item_no-bullit {
     text-decoration: none;
     list-style-type: none;
-    padding-left: 50,5;
 }
 
 .header__links-list-item {
-    padding: 0 32px 0 10px;
+    list-style-type: circle;
 }
+
+
 
 .header__logo-image {
     width: 148px;
@@ -42,14 +42,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     align-items: end;
     font-style: normal;
     /*flex-wrap: nowrap;*/
     align-content: space-between;
     margin: 50px 98px;
-
-
 }
 
 .contact_info {
@@ -57,30 +54,122 @@
     border-bottom: 1px solid;
 }
 
-.cover {
-    background-image: url(./images/cover.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+.overlay {
+    background-color: #000;
+    opacity: 0.6;
+    position: absolute;
+    inset: 0;
 }
-.overlay {}
+
+.cover {
+    background-image: url( /images/cover.jpg);
+    background-size: cover;
+    z-index: -1;
+    position: relative;
+    padding: 165px 50px 50px;
+    display: flex;
+    flex-direction: column;
+    background-position: center;
+}
 
 .cover__title {
     font-weight: 700px;
     font-size: 100px;
+    letter-spacing: 0.3em;
     color: #FFF;
     text-transform: uppercase;
+    z-index: 1;
+    line-height: 1.15;
+    position: relative;    
 }
 
-.aligned-text
-.aligned-text_center
-.aligned-text_right
+.aligned-text {
+    display: block;
+    line-height: 1;
+    margin-top: 20px;
+}
 
-.letter-spacing-extended
+.aligned-text_center {
+    text-align: center;
+
+}
+
+.aligned-text_right {
+    text-align: end;
+
+}
+
+.letter-spacing-extended {
+letter-spacing: 0.6em;
+}
 
 .no-letter-spacing {
-    letter-space: 0;
+    letter-spacing: 0;
 }
 
+.cover__description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 147px;
+    color: #FFF;
+    position: relative;
+    z-index: 1;
+}
 
+.cover__description-text {
+    font-size: 22px;
+    word-spacing: 24px; /*0.9em*/
+    line-height: 28px;
+    text-transform: uppercase;
+    padding: 0;
+    letter-spacing: 0;
+    
+}
 
+.bet-button {
+    background-color: transparent;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 25.83px;
+    border: 0;
+    padding: 12px 32px ;
+    border: 1px solid #FFF;
+}
 
+.lots {
+    margin: 179px 24px 0px 24px;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+.about__logo-image {
+    width: 148px;
+    height: 105px;
+    margin-top: 92px;
+    margin-bottom: 96px;
+}
+
+.about__title {
+    font-weight: 700px;
+    font-size: 40px;
+    text-transform: uppercase;
+    line-height: 47px;
+
+}
+
+.about__text {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.about__text-margin {
+    margin-bottom: 24px;
+}
