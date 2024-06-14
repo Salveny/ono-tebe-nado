@@ -2,12 +2,9 @@
 .header {
     display: grid;
     grid-template-columns: 1fr min-content 1fr;
-    justify-content: space-evenly;
-    background-color: aqua;
-    font-family: 'Raleway', 'Helvetica' sans-serif;
     font-size: 18px;
-    font-weight: 400;
     margin: 92px 24px 96px 24px;
+
 }
 
 .header__menu {
@@ -17,39 +14,56 @@
 
 .header__links-list {
     display: flex;
+    flex-direction: row;
     list-style-type: none;
-}
+    column-gap: 32px ;
+    
 
-.header__links-list-item_no-bullit {
-    text-decoration: none;
-    list-style-type: none;
 }
 
 .header__links-list-item {
     list-style-type: circle;
 }
 
+.header__links-list-item_no-bullit {
+    list-style-type: none;
+}
 
+.header__link {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.header__logo {
+    justify-self: center;
+    align-self: center; 
+}
 
 .header__logo-image {
     width: 148px;
     height: 105px;
-    margin-top: 92px;
-    margin-bottom: 96px;
 }
 
 .address {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: end;
     font-style: normal;
-    /*flex-wrap: nowrap;*/
-    align-content: space-between;
-    margin: 50px 98px;
+    flex-wrap: wrap;
+    text-align: left;
+    justify-self: end;
+    align-self: center;
+    line-height: 24.3px;
+    margin-right: 50px;
+}
+
+.header__address {
+    justify-self: center;
+    align-self: center; 
+    align-items: end;
+    
+
 }
 
 .contact_info {
+    display: inline-block;
     text-decoration: none;
     border-bottom: 1px solid;
 }
@@ -100,7 +114,7 @@
 }
 
 .letter-spacing-extended {
-letter-spacing: 0.6em;
+    letter-spacing: 0.6em;
 }
 
 .no-letter-spacing {
@@ -141,25 +155,124 @@ letter-spacing: 0.6em;
 }
 
 .lots {
-    margin: 179px 24px 0px 24px;
+    margin: 179px 24px 148px 24px;
+
 }
+
+.lots__title {
+    margin-left: 64px;
+    font-weight: bold;
+    font-size: 40px;
+    text-transform: uppercase;
+
+}
+
+.lots__card-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 25px;
+    list-style-type: none;
+  
+}
+
+.lots__card-list-item {
+    width: 334px;
+    height: 563px;
+    background-size: cover;
+    z-index: -1;
+    position: relative;
+    flex-grow: 1;
+}
+   
+.card-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #FFF;  
+    height: 100%;  
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 51px 40px 48px 40px;
+    }
+
+.card__title {
+    text-transform: uppercase;
+    text-decoration-line: underline;
+    z-index: 1;
+    position: relative;
+    line-height: 26.4px; 
+    font-size: 22px;
+}
+
+.card__text {
+    z-index: 1;
+    position: relative;
+    font-weight: 400px;
+    font-size: 20px;
+    line-height: 24px;       
+}
+
+.card_type_film {
+    background-image: url(/images/card-lot-01.jpg);
+    background-position: center;
+    
+}
+
+.card_type_book {
+    background-image: url(/images/card-lot-02.jpg);
+    background-position: center;
+}
+
+.card_type_picture {
+    background-image: url(/images/card-lot-03.jpg);
+    background-position: center;
+}
+
+.lots__look-more-link {
+    display: inline-block;
+    font-weight: 400px;
+    font-size: 20px;
+    margin-top: 30px;
+    margin-left: 40px;
+    text-decoration: none;
+    border-bottom: 1px solid #000;
+}
+
 
 .about {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 334px 1fr;
+    margin-left: 24px;
+    margin-right: 24px;
+
 }
+
+.about__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    border: 1px solid #000;
+    border-radius: 50%;
+    height: 240px;
+    width: 240px;
+    justify-self: center;
+}
+
 .about__logo-image {
     width: 148px;
-    height: 105px;
-    margin-top: 92px;
-    margin-bottom: 96px;
+    height: 114px;    
 }
 
 .about__title {
-    font-weight: 700px;
+    display: flex;
+    font-weight: bold;
     font-size: 40px;
     text-transform: uppercase;
     line-height: 47px;
+    place-items: center;
 
 }
 
@@ -168,8 +281,92 @@ letter-spacing: 0.6em;
     grid-column: 2/3;
     font-size: 20px;
     line-height: 24px;
+    letter-spacing: 0.01em;
 }
 
 .about__text-margin {
+    letter-spacing: 0.02em;
     margin-bottom: 24px;
+    margin-right: 5px;
+}
+
+.about__text-margin-no__letter {
+    letter-spacing: 0;
+}
+
+.about__text-margin-extended-letter {
+    letter-spacing: 0.02em;
+}
+
+.about__text-margin-minus-letter {
+    letter-spacing: -0.01em;
+} 
+
+.about__text-margin-big-letter {
+    letter-spacing: 0.03em;
+}
+
+.about__text-no-margin {
+    letter-spacing: 0.04em;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 18px;
+    font-weight: 400;
+    margin: 92px 24px 96px 24px;
+}
+
+.footer__address {
+    justify-self: center;
+    align-self: center; 
+    align-items: start;
+    
+}
+
+.footer__menu {
+    justify-self: center;
+    align-self: center;
+}
+
+.footer__menu-list {
+    display: flex;
+    list-style-type: none;
+
+}
+
+.footer__menu-list-item {
+
+}
+
+.footer__menu-link {
+    display: block;
+
+}
+
+.footer__menu-link_active {
+    text-decoration: none;
+
+}
+
+.footer__social-list {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    column-gap: 48px;
+}
+
+.footer__social-list-item {
+    width: 48px;
+    height: 48px;
+
+}
+
+.footer__social-link {
+
+}
+
+.footer__social-icon {
+
 }
