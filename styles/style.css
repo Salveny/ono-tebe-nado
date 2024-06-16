@@ -259,7 +259,6 @@
 }
 
 .about__title {
-    /*display: grid;*/
     font-weight: bold;
     font-size: 40px;
     text-transform: uppercase;
